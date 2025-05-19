@@ -1,0 +1,43 @@
+<p style="text-align: center; font-size: 14px; color: #555;">
+  Fill in your details and click "Generate Front Page" → then "Download as PDF".
+</p>
+
+<div class="form-container">
+  <h2>Assignment Front Page Generator</h2>
+  <input type="text" id="studentName" placeholder="Enter Student Name" />
+  <input type="text" id="usn" placeholder="Enter USN" />
+  <input type="text" id="section" placeholder="Enter Section" />
+  <input type="number" id="assignmentNo" placeholder="Enter Assignment Number" />
+
+  <select id="topicType">
+    <option value="Case study">Case study</option>
+    <option value="Topic">Topic</option>
+  </select>
+
+  <textarea id="topic" placeholder="Enter Topic/Case Study"></textarea>
+
+  <select id="subject">
+    <option value="Fundamentals of Computer Networks (UE24CS1205)">Fundamentals of Computer Networks (UE24CS1205)</option>
+    <option value="Data Structures & Application (UE24CS1203)">Data Structures & Application (UE24CS1203)</option>
+    <option value="Python Programming (UE24CS1204)">Python Programming (UE24CS1204)</option>
+    <option value="Applied Physics for CSE (UE24SC1202)">Applied Physics for CSE (UE24SC1202)</option>
+    <option value="Applied Mathematics for computer science (UE24CS1201)">Applied Mathematics for computer science (UE24CS1201)</option>
+    <option value="Fundamentals of Database Management System (UE24CS1206)">Fundamentals of Database Management system (UE24CS1206)</option>
+  </select>
+  <input type="text" id="department" placeholder="Enter Department (e.g., ISE, CSE)" />
+
+  <input type="text" id="teacherName" placeholder="Enter Teacher's Name" />
+
+  <button onclick="generateFrontPage()">Generate Front Page</button>
+  <button onclick="downloadPdf()" id="downloadButton" style="display:none;">Download as PDF</button>
+
+  <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
+    <p style="display: inline-flex; align-items: center; gap: 8px;">
+      Designed & Developed by
+
+      <img src="https://i.postimg.cc/Nf2rcbQv/sai.jpg" alt="Designer Photo" style="width: 30px; height: 50px; border-radius: 100%; object-fit: cover;" />
+      <strong>Shankar Sai N</strong> – ISE, Data Science
+    </p>
+  </div>
+
+  <div id="frontPage" class="a4-page" style="display:none;"></div>

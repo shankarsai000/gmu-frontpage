@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  margin: 0;
+  padding: 40px 60px;
+  color: #333;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffffee;
+  padding: 15px;
+  border-radius: 45px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.form-container h2 {
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+input,
+select,
+textarea {
+  width: 90%;
+  margin-bottom: 15px;
+  padding: 20px 15px;
+  border: 3px solid #90caf9;
+  border-radius: 15px;
+  font-size: 12px;
+  background-color: #f0faff;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1976d2;
+  background-color: #e3f2fd;
+  outline: none;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
+}
+
+button {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0097a7;
+}
+
+.designer-note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* A4 Page Styling */
+.a4-page {
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  margin: 0mm;
+  padding: 10mm;
+  background: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* prevent content spill */
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+
+  .form-container,
+  .designer-note,
+  #downloadButton {
+    display: none;
+  }
+
+  .a4-page {
+    margin: 0;
+    border: 2px solid #000;
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
